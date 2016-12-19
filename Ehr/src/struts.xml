@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="login" extends="struts-default" namespace="/">
+		<action name="login" class="com.zqrk.action.LoginAction">
+		</action>
+		<action name="logout" class="com.zqrk.action.LogoutAction">
+			<result name="login">/login.jsp</result>
+		</action>
+	</package>
+	<package name="power" extends="struts-default" namespace="/">
+		<action name="users*" class="com.zqrk.action.UsersAction"
+			method="{1}">
+			<result name="view">/users/view.jsp</result>
+			<result name="update">/users/update.jsp</result>
+			<result name="search">/users/search.jsp</result>
+			<result name="bindRole">/users/bindRole.jsp</result>
+		</action>
+	</package>
+</struts>    
+
+
+
+
+
+
+
+
+
+
+
+
+
